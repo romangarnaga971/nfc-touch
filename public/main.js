@@ -26,9 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
     revealEls.forEach(el=>{ el.style.opacity=1; el.style.transform='none'; });
   }
 
-  /* 3D drum carousel, desktop only */
-  const isDesktop = window.matchMedia('(min-width:761px)').matches;
-  if(hasGSAP && isDesktop){
+  /* 3D drum carousel, all devices */
+  if(hasGSAP){
     const drum = document.getElementById('drum');
     const cards = gsap.utils.toArray('#drum .card3d');
     const dots = gsap.utils.toArray('#drum-dots span');
