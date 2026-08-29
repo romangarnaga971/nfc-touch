@@ -233,6 +233,7 @@ section{ padding:110px 0; position:relative; }
 @media(max-width:760px){
   .hero { padding-top: 80px; }
   .drum-pin { padding: 20px 0; }
+  .drum-stage { transform: scale(0.75); }
 }
 
 /* ---------- How it works ---------- */
