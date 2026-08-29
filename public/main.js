@@ -149,8 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const submitBtn = document.getElementById('submit-btn');
 
   function showToast(msg, ok){
+    const toastIc = toast.querySelector('.toast-ic');
+    if(ok) {
+      toastIc.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34A853" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>';
+      toast.style.borderColor = 'rgba(52,168,83,0.4)';
+    } else {
+      toastIc.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EA4335" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>';
+      toast.style.borderColor = 'rgba(234,67,53,0.4)';
+    }
     toastText.textContent = msg;
-    toast.style.borderColor = ok ? 'rgba(52,168,83,0.4)' : 'rgba(234,67,53,0.4)';
     toast.classList.add('show');
     setTimeout(()=> toast.classList.remove('show'), 4000);
   }
