@@ -1,0 +1,12 @@
+{
+  "name": "nfc-touch-landing",
+  "version": "1.0.0",
+  "description": "NFC Touch Landing Page with Serverless Telegram Integration",
+  "main": "api/send-order.js",
+  "scripts": {
+    "start": "npx serve public"
+  },
+  "dependencies": {
+    "formidable": "^3.5.1"
+  }
+}
